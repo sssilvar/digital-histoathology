@@ -24,10 +24,12 @@ titlesize = 24
 # ==================================================
 # 1. Load input image
 # ==================================================
-input_image_file = ('https://data.kitware.com/api/v1/file/'
-                    '576ad39b8d777f1ecd6702f2/download')  # Easy1.png
+# input_image_file = ('https://data.kitware.com/api/v1/file/'
+#                     '576ad39b8d777f1ecd6702f2/download')  # Easy1.png
+input_image_file = 'slide.png'
 
 im_input = skimage.io.imread(input_image_file)[:, :, :3]
+print(im_input.shape)
 
 plt.imshow(im_input)
 _ = plt.title('Input Image', fontsize=16)
